@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_accounts_profile/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const MyHomePage
+      home: const Profile(),
     );
   }
 }
