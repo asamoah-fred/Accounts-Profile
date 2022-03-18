@@ -82,27 +82,51 @@ class Profile extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.school,
-                        color: Colors.blueAccent,
-                        size: 20,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Pro",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                          fontSize: 15,
+                      Container(
+                        width: 75,
+                        height: 30,
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          // color: Colors.grey,
+                          elevation: 15,
+                          shadowColor: Colors.grey,
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 12,
+                                backgroundColor: Colors.tealAccent,
+                                child: Icon(
+                                  Icons.school,
+                                  color: Colors.blueAccent,
+                                  size: 20,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                "Pro",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black87,
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Spacer(),
-                      Icon(
-                        Icons.notification_add,
-                        size: 20,
-                        color: Colors.blueAccent,
+                      CircleAvatar(
+                        radius: 12,
+                        backgroundColor: Colors.tealAccent,
+                        child: Icon(
+                          Icons.notification_add,
+                          size: 20,
+                          color: Colors.blueAccent,
+                        ),
                       ),
                     ],
                   ),
@@ -430,6 +454,11 @@ class Profile extends StatelessWidget {
                   ),
                 ),
               ),
+
+              // Third Layer Closed!!!!!!!!!!!!!!!!
+
+              // Fifth Layer Opene!!!!!!!!!!
+
               Container(
                 color: Colors.white,
                 height: 300,
@@ -517,6 +546,9 @@ class Profile extends StatelessWidget {
                   ),
                 ),
               ),
+
+              /// Last Container
+              /// Fifth Layer Closed!!!!!!!!!!!!!!
             ],
           ),
         ),
