@@ -111,8 +111,7 @@ class Profile extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              
-              
+
               // Second Container open!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
               Container(
@@ -311,11 +310,36 @@ class Profile extends StatelessWidget {
                 ),
               ),
 // Second Container Closed!!!!!!!!!!!!!!!!!
-              Text("The amount is the net sum of all your savings"),
-              Container(
-                color: Colors.blue,
-                width: 50,
+
+              //  Third Layer Open!!!!!!!!!!!!!!!!!!!!!!!
+              SizedBox(
+                height: 20,
               ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Text(
+                    "Latest activities",
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent),
+                  ),
+                  Spacer(),
+                  Text(
+                    "Show all",
+                    style: TextStyle(
+                      fontSize: 16,
+                      // fontWeight: FontWeight.normal,
+                      color: Colors.lightBlue,
+                    ),
+                  ),
+                ],
+              ),
+
+              // Third Layer Closed!!!!!!!!!!!!!!!!!!!!!!!!!
+
             ],
           ),
         ),
