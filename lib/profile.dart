@@ -106,6 +106,64 @@ class Profile extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              // Second Container open
+              Container(
+                height: 200,
+                color: Colors.red,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.start,
+                    // crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Savings Balance",
+                        style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black54,
+                          fontSize: 15,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.visibility_off_outlined,
+                        size: 18,
+                      ),
+                      Spacer(),
+                      Container(
+                        height: 30,
+                        width: 65,
+                        color: Colors.green,
+                        child: Row(
+                          // crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                text: "+300",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'CFA',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white38),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
