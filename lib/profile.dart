@@ -339,7 +339,184 @@ class Profile extends StatelessWidget {
               ),
 
               // Third Layer Closed!!!!!!!!!!!!!!!!!!!!!!!!!
+              SizedBox(
+                height: 12,
+              ),
+              // fourth Layer Open!!!!!!!!!!!!!!!!!!!!!
 
+              Container(
+                color: Colors.white,
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: Container(
+                    width: 60,
+                    height: 55,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      color: Colors.blueAccent,
+                      elevation: 10,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.folder,
+                              color: Colors.white,
+                              size: 22,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  title: Text(
+                    'Ejara Flex',
+                    style: TextStyle(
+                      color: Colors.lightBlueAccent,
+                      fontSize: 20,
+                      // letterSpacing: 1.0,
+                      // fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "Earning",
+                    style: TextStyle(
+                      color: Colors.tealAccent,
+                      fontSize: 14,
+                      // letterSpacing: 1.0,
+                      // fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Container(
+                        width: 110,
+                        height: 40,
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          // color: Colors.white,
+                          elevation: 0,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.plus,
+                                  color: Colors.green,
+                                  size: 12,
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  '200CFA',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black87,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("3 Oct, 2021"),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                height: 300,
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: Container(
+                    width: 60,
+                    height: 55,
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      color: Colors.blueAccent,
+                      elevation: 10,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.folder,
+                              color: Colors.white,
+                              size: 22,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  title: Text(
+                    'Ejara Flex',
+                    style: TextStyle(
+                      color: Colors.lightBlueAccent,
+                      fontSize: 20,
+                      // letterSpacing: 1.0,
+                      // fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "Withdrawal",
+                    style: TextStyle(
+                      color: Colors.tealAccent,
+                      fontSize: 14,
+                      // letterSpacing: 1.0,
+                      // fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Container(
+                        width: 110,
+                        height: 40,
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          color: Colors.white,
+                          elevation: 0,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.minus,
+                                  color: Colors.red,
+                                  size: 12,
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  '200CFA',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black87,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Text("3 Oct, 2021"),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
