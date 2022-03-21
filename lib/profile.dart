@@ -17,8 +17,9 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  bool _visible = true;
+  // bool _visible = true;
   bool _click = true;
+  bool _amount = true;
 
   @override
   Widget build(BuildContext context) {
@@ -79,8 +80,8 @@ class _ProfileState extends State<Profile> {
                                 GestureDetector(
                                   onTap: () {
                                     setState(() {
-                                      _visible = !_visible;
                                       _click = !_click;
+                                      _amount = !_amount;
                                     });
                                   },
                                   child: Icon(
@@ -131,27 +132,25 @@ class _ProfileState extends State<Profile> {
                                 ),
                               ],
                             ),
-                            Visibility(
-                              visible: _visible,
-                              child: RichText(
-                                text: TextSpan(
-                                  text: '150,000',
-                                  style: TextStyle(
-                                    fontSize: 27,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: "CFA",
-                                      style: TextStyle(
-                                        fontSize: 27,
-                                        color: Colors.grey,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
+                            RichText(
+                              text: TextSpan(
+                                text:
+                                    (_amount == false) ? '*******' : '150,000',
+                                style: TextStyle(
+                                  fontSize: 27,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
                                 ),
+                                children: [
+                                  TextSpan(
+                                    text: (_amount == false) ? '***' : "CFA",
+                                    style: TextStyle(
+                                      fontSize: 27,
+                                      color: Colors.grey,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                             SizedBox(
