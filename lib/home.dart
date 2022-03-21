@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_accounts_profile/data/transaction_list.dart';
 import 'package:my_accounts_profile/widgets/custom_card.dart';
 import 'package:my_accounts_profile/widgets/transactions.dart';
 
@@ -288,36 +289,18 @@ class _ProfileState extends State<Profile> {
 
                   /// Last Container
                   /// Fifth Layer Closed!!!!!!!!!!!!!!
-
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
-                    child: Container(
-                      color: Colors.white,
-                      height: 600,
-                      child: Column(
-                        children: [
-                          Transactions(
-                            proImage: (Icons.folder),
-                            proName: 'Ejara Flex',
-                            tranStatus: 'Earning',
-                            tranSign: (FontAwesomeIcons.plus),
-                            tranSignCol: (Colors.green),
-                            amount: '200CFA',
-                            date: '3 Oct 2021',
-                          ),
-                          Transactions(
-                            proImage: (Icons.folder),
-                            proName: 'Ejara Flex',
-                            tranStatus: 'Withdrawal',
-                            tranSign: (FontAwesomeIcons.minus),
-                            tranSignCol: (Colors.red),
-                            amount: '200CFA',
-                            date: '3 Oct 2021',
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  ///
+                  ///
+                  ListView.builder(
+                      itemCount: transactions.length,
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) {
+                        final item = transactions[index];
+                        return TransactionsCard(
+                          transactions: item,
+                        );
+                      }),
                 ],
               ),
             ),

@@ -2,12 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_accounts_profile/data/transaction_list.dart';
+import 'package:my_accounts_profile/data/transactions.dart';
 
-Widget Transactions(
-    {proImage, proName, tranStatus, tranSign, amount, date, tranSignCol}) {
-  return ListView.builder(
-    itemBuilder: (BuildContext, index) {
-      return Container(
+class TransactionsCard extends StatelessWidget {
+  const TransactionsCard({
+    required this.transactions,
+    Key? key,
+  }) : super(key: key);
+  final Transaction transactions;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Container(
         child: ListTile(
           contentPadding: EdgeInsets.zero,
           leading: Container(
@@ -24,7 +32,7 @@ Widget Transactions(
                 child: Row(
                   children: [
                     Icon(
-                      proImage,
+                      Icons.folder,
                       color: Colors.white,
                       size: 22,
                     ),
@@ -34,7 +42,7 @@ Widget Transactions(
             ),
           ),
           title: Text(
-            proName,
+            transactions.transactionName,
             style: const TextStyle(
               color: Colors.lightBlueAccent,
               fontSize: 20,
@@ -43,7 +51,7 @@ Widget Transactions(
             ),
           ),
           subtitle: Text(
-            tranStatus,
+            transactions.type,
             style: const TextStyle(
               color: Colors.black38,
               fontSize: 14,
@@ -60,22 +68,26 @@ Widget Transactions(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  // color: Colors.white,
+                  color: Colors.grey.shade200,
                   elevation: 0,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(
                       children: [
                         Icon(
-                          tranSign,
-                          color: tranSignCol,
+                          transactions.type == 'Deposit'
+                              ? FontAwesomeIcons.plus
+                              : FontAwesomeIcons.minus,
+                          color: transactions.type == 'Deposit'
+                              ? Colors.green
+                              : Colors.red,
                           size: 12,
                         ),
                         const SizedBox(
                           width: 5,
                         ),
                         Text(
-                          amount,
+                          '${transactions.amount}',
                           style: const TextStyle(
                             fontSize: 15,
                             color: Colors.blueGrey,
@@ -87,16 +99,11 @@ Widget Transactions(
                   ),
                 ),
               ),
-              Text(date),
+              Text(transactions.date),
             ],
           ),
         ),
-      );
-    },
-    itemCount: 1,
-    shrinkWrap: true,
-    padding: const EdgeInsets.all(5),
-    scrollDirection: Axis.vertical,
-    physics: const NeverScrollableScrollPhysics(),
-  );
+      ),
+    );
+  }
 }
