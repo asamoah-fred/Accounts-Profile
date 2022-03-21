@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_accounts_profile/custom_card.dart';
 import 'package:my_accounts_profile/transactions.dart';
 
 class Profile extends StatelessWidget {
@@ -21,7 +22,12 @@ class Profile extends StatelessWidget {
       // ),
       body: Column(
         children: [
-          
+          CustomCard(
+            proPic: 'images/2.jpg',
+            icon: (Icons.school),
+            status: 'Pro',
+            notify: (Icons.notification_add),
+          ),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
