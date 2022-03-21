@@ -332,102 +332,25 @@ class Profile extends StatelessWidget {
 
                   /// Last Container
                   /// Fifth Layer Closed!!!!!!!!!!!!!!
-                  ListView.builder(
-                    itemBuilder: (BuildContext, index) {
-                      return Container(
-                        child: ListTile(
-                          contentPadding: EdgeInsets.zero,
-                          leading: Container(
-                            width: 60,
-                            height: 55,
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              color: Colors.blueAccent,
-                              elevation: 10,
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 15),
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.folder,
-                                      color: Colors.white,
-                                      size: 22,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          title: Text(
-                            'Ejara Flex',
-                            style: TextStyle(
-                              color: Colors.lightBlueAccent,
-                              fontSize: 20,
-                              // letterSpacing: 1.0,
-                              // fontWeight: FontWeight.normal,
-                            ),
-                          ),
-                          subtitle: Text(
-                            "Earning",
-                            style: TextStyle(
-                              color: Colors.tealAccent,
-                              fontSize: 14,
-                              // letterSpacing: 1.0,
-                              // fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          trailing: Column(
-                            children: [
-                              Container(
-                                width: 110,
-                                height: 40,
-                                child: Card(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  // color: Colors.white,
-                                  elevation: 0,
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15),
-                                    child: Row(
-                                      children: [
-                                        Icon(
-                                          FontAwesomeIcons.plus,
-                                          color: Colors.green,
-                                          size: 12,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Text(
-                                          '200CFA',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            color: Colors.black87,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Text("3 Oct, 2021"),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                    itemCount: 2,
-                    shrinkWrap: true,
-                    padding: EdgeInsets.all(5),
-                    scrollDirection: Axis.vertical,
-                    physics: NeverScrollableScrollPhysics(),
-                  )
+
+                  Transactions(
+                    proImage: (Icons.folder),
+                    proName: 'Ejara Flex',
+                    tranStatus: 'Earning',
+                    tranSign: (FontAwesomeIcons.plus),
+                    tranSignCol: (Colors.green),
+                    amount: '200CFA',
+                    date: '3 Oct 2021',
+                  ),
+                  Transactions(
+                    proImage: (Icons.folder),
+                    proName: 'Ejara Flex',
+                    tranStatus: 'Withdrawal',
+                    tranSign: (FontAwesomeIcons.minus),
+                    tranSignCol: (Colors.red),
+                    amount: '200CFA',
+                    date: '3 Oct 2021',
+                  ),
                 ],
               ),
             ),
