@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_accounts_profile/custom_card.dart';
-import 'package:my_accounts_profile/transactions.dart';
+import 'package:my_accounts_profile/widgets/custom_card.dart';
+import 'package:my_accounts_profile/widgets/transactions.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
