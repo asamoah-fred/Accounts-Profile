@@ -9,8 +9,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_accounts_profile/widgets/custom_card.dart';
 import 'package:my_accounts_profile/widgets/transactions.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
+
+  @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  int amount = 150000;
 
   @override
   Widget build(BuildContext context) {
@@ -115,7 +122,7 @@ class Profile extends StatelessWidget {
                             ),
                             RichText(
                               text: TextSpan(
-                                text: "150,000",
+                                text: '$amount',
                                 style: TextStyle(
                                   fontSize: 27,
                                   color: Colors.black,

@@ -31,7 +31,7 @@ Widget CustomCard({proPic, icon, status, notify}) {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 // color: Colors.grey,
-                elevation: 15,
+                elevation: 0,
                 shadowColor: Colors.grey,
                 child: Row(
                   children: [
