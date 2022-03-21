@@ -269,23 +269,34 @@ class Profile extends StatelessWidget {
                   /// Last Container
                   /// Fifth Layer Closed!!!!!!!!!!!!!!
 
-                  Transactions(
-                    proImage: (Icons.folder),
-                    proName: 'Ejara Flex',
-                    tranStatus: 'Earning',
-                    tranSign: (FontAwesomeIcons.plus),
-                    tranSignCol: (Colors.green),
-                    amount: '200CFA',
-                    date: '3 Oct 2021',
-                  ),
-                  Transactions(
-                    proImage: (Icons.folder),
-                    proName: 'Ejara Flex',
-                    tranStatus: 'Withdrawal',
-                    tranSign: (FontAwesomeIcons.minus),
-                    tranSignCol: (Colors.red),
-                    amount: '200CFA',
-                    date: '3 Oct 2021',
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Container(
+                      color: Colors.white,
+                      height: 600,
+                      child: Column(
+                        children: [
+                          Transactions(
+                            proImage: (Icons.folder),
+                            proName: 'Ejara Flex',
+                            tranStatus: 'Earning',
+                            tranSign: (FontAwesomeIcons.plus),
+                            tranSignCol: (Colors.green),
+                            amount: '200CFA',
+                            date: '3 Oct 2021',
+                          ),
+                          Transactions(
+                            proImage: (Icons.folder),
+                            proName: 'Ejara Flex',
+                            tranStatus: 'Withdrawal',
+                            tranSign: (FontAwesomeIcons.minus),
+                            tranSignCol: (Colors.red),
+                            amount: '200CFA',
+                            date: '3 Oct 2021',
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),

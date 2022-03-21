@@ -45,7 +45,7 @@ Widget Transactions(
           subtitle: Text(
             tranStatus,
             style: const TextStyle(
-              color: Colors.tealAccent,
+              color: Colors.black38,
               fontSize: 14,
               // letterSpacing: 1.0,
               // fontWeight: FontWeight.bold,
@@ -78,7 +78,7 @@ Widget Transactions(
                           amount,
                           style: const TextStyle(
                             fontSize: 15,
-                            color: Colors.black87,
+                            color: Colors.blueGrey,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
