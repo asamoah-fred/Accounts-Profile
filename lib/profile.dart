@@ -17,7 +17,8 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  int amount = 150000;
+  bool _visible = true;
+  bool _click = true;
 
   @override
   Widget build(BuildContext context) {
@@ -75,9 +76,19 @@ class _ProfileState extends State<Profile> {
                                 SizedBox(
                                   width: 15,
                                 ),
-                                Icon(
-                                  Icons.visibility_off_outlined,
-                                  size: 16,
+                                GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      _visible = !_visible;
+                                      _click = !_click;
+                                    });
+                                  },
+                                  child: Icon(
+                                    (_click == false)
+                                        ? Icons.visibility_outlined
+                                        : Icons.visibility_off_outlined,
+                                    size: 16,
+                                  ),
                                 ),
                                 Spacer(
                                   flex: 1,
@@ -120,24 +131,27 @@ class _ProfileState extends State<Profile> {
                                 ),
                               ],
                             ),
-                            RichText(
-                              text: TextSpan(
-                                text: '$amount',
-                                style: TextStyle(
-                                  fontSize: 27,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: "CFA",
-                                    style: TextStyle(
-                                      fontSize: 27,
-                                      color: Colors.grey,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                            Visibility(
+                              visible: _visible,
+                              child: RichText(
+                                text: TextSpan(
+                                  text: '150,000',
+                                  style: TextStyle(
+                                    fontSize: 27,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                ],
+                                  children: [
+                                    TextSpan(
+                                      text: "CFA",
+                                      style: TextStyle(
+                                        fontSize: 27,
+                                        color: Colors.grey,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             SizedBox(
