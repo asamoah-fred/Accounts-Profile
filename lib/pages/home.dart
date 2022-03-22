@@ -9,15 +9,16 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_accounts_profile/data/transaction_list.dart';
 import 'package:my_accounts_profile/widgets/custom_card.dart';
 import 'package:my_accounts_profile/widgets/transactions.dart';
+import 'package:my_accounts_profile/pages/more_transactions.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<Home> createState() => _HomeState();
 }
 
-class _ProfileState extends State<Profile> {
+class _HomeState extends State<Home> {
   // bool _visible = true;
   bool _click = true;
   bool _amount = true;
@@ -270,12 +271,22 @@ class _ProfileState extends State<Profile> {
                             color: Colors.blueAccent),
                       ),
                       Spacer(),
-                      Text(
-                        "Show all",
-                        style: TextStyle(
-                          fontSize: 16,
-                          // fontWeight: FontWeight.normal,
-                          color: Colors.lightBlue,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => More(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Show all",
+                          style: TextStyle(
+                            fontSize: 16,
+                            // fontWeight: FontWeight.normal,
+                            color: Colors.lightBlue,
+                          ),
                         ),
                       ),
                     ],
@@ -292,7 +303,7 @@ class _ProfileState extends State<Profile> {
                   ///
                   ///
                   ListView.builder(
-                      itemCount: transactions.length,
+                      itemCount: 5,
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) {

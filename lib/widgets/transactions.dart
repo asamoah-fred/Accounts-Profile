@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_accounts_profile/data/transaction_list.dart';
 import 'package:my_accounts_profile/data/transactions.dart';
+import 'package:my_accounts_profile/pages/more_transactions.dart';
 
 class TransactionsCard extends StatelessWidget {
   const TransactionsCard({
